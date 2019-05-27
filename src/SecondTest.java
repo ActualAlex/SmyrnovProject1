@@ -16,7 +16,6 @@ public class SecondTest {
     @Before
     public void setUp() {
         login = "qwe@gmail.com";
-
         System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://accounts.google.com");
@@ -24,7 +23,7 @@ public class SecondTest {
     }
 
     @Test
-    public void loginToGmailWithIncorrectMailShouldNotWork() {
+    public void logInToGmailWithIncorrectMailShouldNotWork() {
         driver.findElement(By.id("identifierId")).sendKeys(login);
         driver.findElement(By.xpath("//content/span")).click();
         delay(2000);
@@ -34,7 +33,6 @@ public class SecondTest {
 
     @After
     public void tearDown() {
-        delay(1000);
         driver.quit();
     }
 

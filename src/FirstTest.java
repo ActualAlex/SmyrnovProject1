@@ -25,20 +25,19 @@ public class FirstTest {
     }
 
     @Test
-    public void loginToGmailShouldWork() {
+    public void logInToGmailShouldWork() {
          driver.findElement(By.id("identifierId")).sendKeys(login);
          driver.findElement(By.xpath("//content/span")).click();
          delay(2000);
          driver.findElement(By.cssSelector("input[type=password]")).sendKeys(password);
          driver.findElement(By.xpath("//div/div/content/span")).click();
          delay(2000);
-        String message = driver.findElement(By.cssSelector(".x7WrMb")).getText();
+         String message = driver.findElement(By.cssSelector(".x7WrMb")).getText();
          Assert.assertEquals(message, "Добро пожаловать, Алексей Смирнов!");
     }
 
     @After
     public void tearDown() {
-        delay(2000);
         driver.quit();
     }
 

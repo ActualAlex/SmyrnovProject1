@@ -25,7 +25,7 @@ public class ThirdTest {
     }
 
     @Test
-    public void loginToGmailWithIncorrectPasswordShouldNotWork() {
+    public void logInToGmailWithIncorrectPasswordShouldNotWork() {
         driver.findElement(By.id("identifierId")).sendKeys(login);
         driver.findElement(By.xpath("//content/span")).click();
         delay(2000);
@@ -38,7 +38,6 @@ public class ThirdTest {
 
     @After
     public void tearDown() {
-        delay(2000);
         driver.quit();
     }
 
