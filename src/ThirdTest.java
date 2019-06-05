@@ -27,10 +27,10 @@ public class ThirdTest {
     @Test
     public void logInToGmailWithIncorrectPasswordShouldNotWork() {
         driver.findElement(By.id("identifierId")).sendKeys(login);
-        driver.findElement(By.xpath("//content/span")).click();
+        driver.findElement(By.xpath("//span/span")).click();
         delay(2000);
         driver.findElement(By.cssSelector("input[type=password]")).sendKeys(password);
-        driver.findElement(By.xpath("//div/div/content/span")).click();
+        driver.findElement(By.xpath("//div/div/span/span")).click();
         delay(2000);
         String message = driver.findElement(By.cssSelector(".GQ8Pzc")).getText();
         Assert.assertEquals(message , "Неверный пароль. Повторите попытку или нажмите на ссылку \"Забыли пароль?\", чтобы сбросить его.");

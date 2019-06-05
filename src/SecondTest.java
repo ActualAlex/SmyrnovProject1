@@ -25,7 +25,7 @@ public class SecondTest {
     @Test
     public void logInToGmailWithIncorrectMailShouldNotWork() {
         driver.findElement(By.id("identifierId")).sendKeys(login);
-        driver.findElement(By.xpath("//content/span")).click();
+        driver.findElement(By.xpath("//span/span")).click();
         delay(2000);
         String message = driver.findElement(By.cssSelector(".GQ8Pzc")).getText();
         Assert.assertEquals(message , "Не удалось найти аккаунт Google");

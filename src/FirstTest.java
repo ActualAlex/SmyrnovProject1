@@ -27,10 +27,10 @@ public class FirstTest {
     @Test
     public void logInToGmailShouldWork() {
          driver.findElement(By.id("identifierId")).sendKeys(login);
-         driver.findElement(By.xpath("//content/span")).click();
+         driver.findElement(By.xpath("//span/span")).click();
          delay(2000);
          driver.findElement(By.cssSelector("input[type=password]")).sendKeys(password);
-         driver.findElement(By.xpath("//div/div/content/span")).click();
+         driver.findElement(By.xpath("//div/div/span/span")).click();
          delay(2000);
          String message = driver.findElement(By.cssSelector(".x7WrMb")).getText();
          Assert.assertEquals(message, "Добро пожаловать, Алексей Смирнов!");
